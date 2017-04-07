@@ -1,17 +1,23 @@
+package paskaita3;
+
+import java.util.InputMismatchException;
 import java.util.Scanner;
 
 /**
  * Created by BT-16-00012 on 2017-04-06.
  */
-public class Uzduotis3 {
+public class Uzduotis4 {
 
-    //1.3.  Parašyti programą, kuri paprašytų vesti skaičius tol, kol bus įvestas skaičius 0. Pabaigoje turi būti atvaizduojama įvestų skaičių suma.
-
+    //. Papildykite 1.3. programą kuri neleistu įvesti ne skaičius, jei vartotojas įveda ne skaičių programa prašo pakartoti tol kol bus įvestas skaičius.
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
-        int i = 0;
-int sum = 0;
+        int sum = 0;
+
+
+
+
         while (true) {
+            try {
 
             System.out.println("irasykite skaiciu");
             int sk = sc.nextInt();
@@ -19,10 +25,18 @@ int sum = 0;
             if (sk == 0) {
 
                 break;
+
             }
+        } catch (InputMismatchException e) {
+            System.out.println("Irasyk skaiciu sakiau BL");
+
+            sc.nextLine();
+        }
 
         }
         System.out.println("Ivestu skaiciu suma lygi " + sum);
+
     }
+
 
 }
