@@ -1,5 +1,7 @@
 package paskaita2;
 
+import com.sun.org.omg.CORBA.ContextIdSeqHelper;
+
 /**
  * Created by BT-16-00012 on 2017-04-05.
  */
@@ -21,6 +23,12 @@ public class SecondClassExample {
         SecondClassExample className = new SecondClassExample();
         className.example2();
         SecondClassExample.example2();
+
+        //konstruktoriaus iskvietimas
+
+        ConstructorExample co = new ConstructorExample();
+        ConstructorExample col = new ConstructorExample(12);
+
 
     }
 //metodas nieko negrazina
